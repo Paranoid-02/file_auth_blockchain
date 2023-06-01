@@ -5,7 +5,7 @@ import FileUpload from "./components/FileUpload";
 import Modal from "./components/Modal"; 
 import VModal from "./components/VModal"; 
 import Display from "./components/Display";
-
+// import Certificate from "./artifacts/contracts/Certificate.sol/Certificate.json";
 const App = () => {
   const [account, setAccount] = useState("");
   const [contract, setContract] = useState(null);
@@ -47,12 +47,12 @@ const App = () => {
 
   return (
     <div className="text-center mx-auto">
-      {(
+      {!modalOpen && (
         <button  onClick={() => setModalOpen(true)}>
           Share
         </button>
       )}{" "}
-      {modalOpen && (<Modal setModalOpen={setModalOpen} contract={contract} />)}
+      {modalOpen && (<Modal setModalOpen={setModalOpen} contract={contract} />)} 
 
       { (
         <button  onClick={() => setVModalOpen(true)}>
