@@ -1,4 +1,3 @@
-import Certificate from "./artifacts/contracts/Certificate.sol/Certificate.json";
 import "./App.css";
 import { useState, useEffect } from "react";
 import { ethers } from "ethers";
@@ -47,7 +46,7 @@ const App = () => {
   }, []);
 
   return (
-    <>
+    <div className="text-center mx-auto">
       {!modalOpen && (
         <button  onClick={() => setModalOpen(true)}>
           Share
@@ -62,20 +61,20 @@ const App = () => {
       )}{" "}
       {vmodalOpen && (<VModal setVModalOpen={setVModalOpen} contract={contract} />)}
 
-      <div className="App">
+      <div className="App flex flex-col items-center  mx-auto py-7">
 
-        <h1 style={{color: "white"}}>Certificate Verification System</h1>
+        <h1 style={{color: "white"}} className="">Certificate Verification System</h1>
         <div className="bg"></div>
         <div className="bg bg2"></div>
         <div className="bg bg3"></div>
 
         <p style={{ color: "white" }}>
-          Account : {account ? account : "Please connect your account"}
+          <span className="font-bold">Account : </span>{account ? account : "Please connect your account"}
         </p>
         <FileUpload contract={contract} account={account} provider={provider} />
         <Display contract={contract} account={account} />
       </div>
-    </>
+    </div>
   );
 };
 
