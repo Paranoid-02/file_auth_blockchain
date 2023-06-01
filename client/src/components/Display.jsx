@@ -154,8 +154,11 @@ const Display = ({contract,account}) => {
     <>
     <div className='image-list'>{data}</div>
     <input type="text" placeholder='Enter Address' className='address'></input>
-    <button className='center button' onClick={getAllData}>Get All Data</button>
-    <button className='center button' onClick={getData}>Get Data</button>
+    <div>
+      <button className='center button-9' onClick={getAllData}>Get All Data</button>
+      <button className='center button-9' onClick={getData}>Get Data</button>
+
+    </div>
     </>
   )
 }
