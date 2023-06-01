@@ -14,13 +14,14 @@ const VModal = ({ setVModalOpen, contract }) => {
 
   return (
     <>
-      <div className="modalBackground">
+      <div className="modalBackground z-20 ">
         <div className="modalContainer">
-          <div className="title">Verify</div>
+          <div className="title text-4xl mb-3 font-semibold drop-shadow-lg">Verify</div>
           <div className="body">
             <input
               id="address1"
               type="text"
+              className="p-2 rounded-md text-center border-gray-500 border "
               placeholder="Authorising Body Address"
             ></input>
             </div>
@@ -28,6 +29,7 @@ const VModal = ({ setVModalOpen, contract }) => {
             <input
               id="address2"
               type="text"
+              className="p-2 rounded-md text-center border-gray-500 border"
               placeholder="Authorised Body Address"
             ></input>
             </div>
@@ -35,11 +37,12 @@ const VModal = ({ setVModalOpen, contract }) => {
             <input
               id="hash"
               type="text"
+              className="p-2 rounded-md text-center border-gray-500 border"
               placeholder="Hash/Link of File"
             ></input>
           </div>
           <div className="footer">
-            <button
+            <button className="button-9 px-0 h-20"
               onClick={() => {
                 setVModalOpen(false);
               }}
@@ -47,7 +50,7 @@ const VModal = ({ setVModalOpen, contract }) => {
             >
               Go Back
             </button>
-            <button onClick={() =>verify()}>Verify</button>
+            <button className="button-9" onClick={() =>verify()}>Verify</button>
           </div>
         </div>
       </div>

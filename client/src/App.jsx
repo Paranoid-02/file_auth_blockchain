@@ -47,14 +47,14 @@ const App = () => {
 
   return (
     <div className="text-center mx-auto">
-      {!modalOpen && (
+      {(
         <button  onClick={() => setModalOpen(true)}>
           Share
         </button>
       )}{" "}
       {modalOpen && (<Modal setModalOpen={setModalOpen} contract={contract} />)}
 
-      {!vmodalOpen && (
+      { (
         <button  onClick={() => setVModalOpen(true)}>
           Verify
         </button>

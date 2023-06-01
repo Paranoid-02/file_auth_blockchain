@@ -152,11 +152,11 @@ const Display = ({contract,account}) => {
 
   return (
     <>
-    <div className='image-list'>{data}</div>
-    <input type="text" placeholder='Enter Address' className='address'></input>
-    <div>
-      <button className='center button-9' onClick={getAllData}>Get All Data</button>
-      <button className='center button-9' onClick={getData}>Get Data</button>
+    <div className='image-'>{data}</div>
+    <input type="text" placeholder='Enter Address' className='address border border-gray-600 rounded-md py-4'></input>
+    <div className='flex gap-5 w-[40%]'>
+      <button className='center button-9 w-1/2' onClick={getAllData}>Get All Data</button>
+      <button className='center button-9 w-1/2' onClick={getData}>Get Data</button>
 
     </div>
     </>

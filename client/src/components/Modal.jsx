@@ -24,24 +24,25 @@ const Modal = ({ setModalOpen, contract }) => {
   }, [contract]);
   return (
     <>
-      <div className="modalBackground">
-        <div className="modalContainer">
-          <div className="title">Share with</div>
+      <div className="modalBackground z-20">
+        <div className="modalContainer ">
+          <div className="title text-4xl mb-3 font-semibold drop-shadow-lg">Share with</div>
           <div className="body">
             <input
               type="text"
               id="address"
               // className="address"
               placeholder="Enter Address"
+              className="p-1 rounded-md text-center border-gray-500 border  mb-3"
             ></input>
           </div>
           <form id="myForm">
-            <select id="selectNumber">
+            <select id="selectNumber" className="p-2  rounded-md text-center border-gray-500 border ">
               <option className="address">People With Access</option>
             </select>
           </form>
           <div className="footer">
-            <button
+            <button className="button-9"
               onClick={() => {
                 setModalOpen(false);
               }}
@@ -49,7 +50,7 @@ const Modal = ({ setModalOpen, contract }) => {
             >
               Cancel
             </button>
-            <button onClick={() => sharing()}>Share</button>
+            <button className="button-9" onClick={() => sharing()}>Share</button>
           </div>
         </div>
       </div>
